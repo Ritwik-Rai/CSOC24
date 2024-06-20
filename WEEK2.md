@@ -197,9 +197,9 @@ Our result is  cipher text = message  =44981230718212183604274785925793145442655
 
 First 5 sets are in binary. They give ASCII codes which give us letters.  Gives "CSOC2"  
 The next 7 sets are hexadecimal. They also give ASCII codes that give letters.  Gives "2{ju57_"  
-The next set is base64 encoded. Gives "diff3r3n7_enc"  
+The next set is base64 encoded. Gives "d1ff3r3n7_enc"  
 The leftover sets are octal and give "0d1n65_l0l}"    
-Whole flag is "CSOC23{ju57_diff3r3n7_3nc0d1n65_l0l}    
+Whole flag is "CSOC23{ju57_d1ff3r3n7_3nc0d1n65_l0l}    
 No script was needed.
 
 

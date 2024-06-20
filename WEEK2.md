@@ -189,6 +189,21 @@ Our result is  cipher text = message  =44981230718212183604274785925793145442655
 ## OTHER CHALLENGES
 ### CHALLENGE 1
 
+source.enc is a python file encoded in base64.  
+output.txt is a hex string in which only alternate letters make sense.  
+the program tells us that output.txt is output generated from given program.  
+the program is   
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/81f5d257-00d6-4686-9a4c-36b22904525c)
+The program first converts string to hexadecimal.  
+Afterwards XOR operation is done every four hexadecimal characters between first 2 and last 2 characters by converting them to string.  
+In output first 2digits represent letter for given position and next 2 digit give result of above operation. Through this pattern output has been given.
+Now we can find original string by replacing first 2 hexadecimal with ascii letter and then getting next ASCII letter by XOR'ing previous hex and current hex number . example = for "4310" ==> 43 becomes C and by doing XOR between C and 16 (10 is in hex) we get S .  
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/00e68d4b-4444-445d-aa45-ccfa4c1e3744)
+Above gives odd positon characters.
+Even position characters can be obtained by XOR ing their previous character with even hex blocs in output.txt.  
+Given below  gives even position characters
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/c5e25ea6-e2d5-4564-93e4-b403d496554c)  
+flag is : CSOC23{345y_ba5364_and_x0r?}
 
 
 ### CHALLENGE 2

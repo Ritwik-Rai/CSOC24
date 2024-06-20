@@ -101,18 +101,8 @@ Biclique attack
 
 #### 3)Structure of AES
 
-
-
-
-
-
-
-
-
-
-
-
-
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/fac68a33-d0a3-40ae-9550-4cb7e503dfc4)
+For converting back to bytes first all elements of 1st list are added(in order of appearance in array). then all elements of next list are added and so on.
 
 ## RSA
 ### STARTER

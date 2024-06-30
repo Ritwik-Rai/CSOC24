@@ -17,7 +17,8 @@ Clearin stage 4 and 5 gives a script on .php page which contains flag : picoCTF{
 So instead we can use the IS NOT operator.  
 As in this challenege we have to enter a password we pass an IS NOT statement which is true in password. As its true we pass.  
 
-![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/f8736d26-6c6a-4f8d-b03e-2e81196edf45)  
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/f8736d26-6c6a-4f8d-b03e-2e81196edf45)    
+Flag is : picoCTF{0n3_m0r3_t1m3_fc0f841ee8e0d3e1f479f1a01a617ebb}
 
 ### 3)WEB GAUNTLET 3
 
@@ -29,7 +30,8 @@ The method we used in previous challenge satisfies the conditions of this challe
 So instead we can use the IS NOT operator.  
 As in this challenege we have to enter a password we pass an IS NOT statement which is true in password. As its true we pass.  )
 
-![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/40dc0d4f-330a-42b8-adeb-95dccd46dcb7)  
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/40dc0d4f-330a-42b8-adeb-95dccd46dcb7)   
+Flag is: picoCTF{k3ep_1t_sh0rt_30593712914d76105748604617f4006a}
 
 ### 4)Irish-name-repo 1
 
@@ -68,37 +70,60 @@ As our or statement was getting encrypted it was not working however we can now 
 ![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/f3efd715-9f4d-4df8-a494-604ac636fcdd)  
 We only need to rotate or to be as numerals are not rotated.We got the flag.  
 
+### 7) JaWT Scratchpad
+The hint tells us about the jwt cookie. So after logging in randomly we check cookies and get the jwt cookie.  
+I used burp suite and got the jwt cookie from the response.  
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/54fea564-c2e7-4e82-a9e7-8ff86d019868)  
+On exploring we find the cookie is made of 3 main constituents:  
+1)Header: Gives type of cookie and type of hash.  
+2)Payload: Gives user.
+3)Verification: Has secret sign.  
+
+As we have the jwt cookie we can use John The ripper To get the password.  
+We get the secret sign as:ilovepico  
+Now we input secret sign and change user to admin .  
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/f1e0a064-ab1d-4e4d-a367-d77489cd06e8)
+
+We use this new generated cookie and replace the old jwt cookie and refresh the page.  
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/80466f2d-81f9-414b-b73f-ffed7d052cb8)
 
 
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/6be14964-51a6-4445-b675-a6057f5579ab)  
 
+### 8)Secrets  
+Our hint is folders. On inspecting the page in sources we see a secret folder. So we add secret/ to link and enter.  
+Now we see a further hidden folder in it. We now add hidden/ to link and enter.  
+Again we see superhidden/ which on adding to link and entering we see .   
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/ee5df92b-6c59-43d7-a0fc-52a5bcf59f8d)
 
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/fb16c10e-abee-41e1-995a-b00cee5203ac)
+However flag is visible in our inspect panel.  
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/c788fcd7-354d-4adb-ba25-2db98610cc7f)
 
-
-
-
-
-
-
-
-
-
-
+### 9)Client-side-again  
+We see a password panel on our link. However as i cant find anything interesting with it i open the inspect panel and on opening it i straight away see an html script in which further a java script is hidden.  
 ![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/aa9cd789-9bd2-4346-aa8c-ffa8e4557873)  
 
 ![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/d9da7318-c8c7-4351-ae91-b4ee7548d804)  
 
 ![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/755615a9-0367-4fe7-b7d1-166bd037127d)  
 
-![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/db0c5924-0581-485e-8109-48b51f87da10)
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/db0c5924-0581-485e-8109-48b51f87da10)  
+The java scipt has a _0x4b5b variable . On determining its values we can get: 
 Flag substring characters :  
-        0-8:  
-        7-9:  
-        8-16:  
-        3-6:  
-        24-32:  
-        6-11:   
-        16-24:  
-        12-16:
+        0-8:  picoCTF{
+        7-9:  {n
+        8-16:  not_this
+        3-6:  oCT
+        24-32:  37115} '
+        6-11:   F{not
+        16-24:  _again_3
+        12-16: this   
+        
+  Remove overlapping characters to get flag: picoCTF{not_this_again_337115}  
+
+### 9)  
+
         
 
 

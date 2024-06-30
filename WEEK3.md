@@ -130,47 +130,26 @@ We intercept request with burp suite and change agent to PicoBrowser.
 Now it says it doesnt trust users from other site . So we use refered tag and put site adress in it.  
 Now it says it takes users only in 2018. We use date header and put reandom date in 2018 in it. 
 
-![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/06d96dd9-8a3d-4891-8c70-56dbddc8b1d8)  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/2200364d-5971-458d-972d-863e06707671)
 
+Now we get another warning.  
 
 ![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/403c6d2d-f5bd-4b1e-bf21-0dd3ccd31940)
 
-
+We use DNT header.
 
 
 ![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/12d8c1ee-3acf-4b6f-ab4d-93e37871e7a6)
 
+Now we get another warning.
 
 ![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/aed21727-a51f-4889-b280-b056ca652016)
 
 
 
 ![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/35b5e6c3-e886-4bec-982b-fef733ecf451)
-![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/06d96dd9-8a3d-4891-8c70-56dbddc8b1d8)
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/06d96dd9-8a3d-4891-8c70-56dbddc8b1d8)  
+
 
 

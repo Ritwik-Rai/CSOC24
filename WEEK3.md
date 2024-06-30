@@ -146,10 +146,47 @@ Now we get another warning.
 
 ![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/aed21727-a51f-4889-b280-b056ca652016)
 
+We use X-Forwarded-For header to pass this.  
+Finally we get you dont speak swedish and we just change accepted language to sv-sv.  
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/5267a5be-50c3-462b-be14-c121306e8bad)  
+
+### 11)IntroToBurp  
+We get a registration page on opening link. We input random dta and submit. When we gat otp page we turn on intercept in burp suite and enter a random otp.  
 
 
-![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/35b5e6c3-e886-4bec-982b-fef733ecf451)
-![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/06d96dd9-8a3d-4891-8c70-56dbddc8b1d8)  
+
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/35b5e6c3-e886-4bec-982b-fef733ecf451)  
+We just have to remove otp from request and send it again. We bypass the otp.
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/06d96dd9-8a3d-4891-8c70-56dbddc8b1d8)    
+
+### 12)Java Script Kiddie 1 
+On inspecting we see a script .  
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/61cc2ae2-c865-4760-aece-9d396d860701)
+
+We see jquery library being called.  
+It seems that our input key is used for restructuring of bytes . If we enter the correct key our image is restructured otherwise we get a broken image.
+However the code gives us a hint that the image is png.  
+So by the magic bytes of png we can get the resulting bytes as 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52   
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/51d4abc4-2c10-43a0-9c4b-90de8416da45)
+Now we have result se by reversing the process we get the key  .  
+Key results in image
+
+
+### 13)Java Script Kiddie 2
+This time instead of 16 bytes we have a 32 byte key . 
+It seems that our input key is used for restructuring of bytes . If we enter the correct key our image is restructured otherwise we get a broken image.
+However the code gives us a hint that the image is png.  
+So by the magic bytes of png we can get the resulting bytes as 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52   
+However here only alternate keys matter. get key
+
+
+
+
+
+
+
+
+
 
 
 

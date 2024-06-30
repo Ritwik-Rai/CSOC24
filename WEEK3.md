@@ -122,7 +122,8 @@ Flag substring characters :
         
   Remove overlapping characters to get flag: picoCTF{not_this_again_337115}  
 
-### 9)  
+### 10)  WHO are you  
+
 
         
 
@@ -135,7 +136,6 @@ Flag substring characters :
 
 
 
-![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/35b5e6c3-e886-4bec-982b-fef733ecf451)
 
 
 ![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/06d96dd9-8a3d-4891-8c70-56dbddc8b1d8)
@@ -177,5 +177,6 @@ Flag substring characters :
 
 
 
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/35b5e6c3-e886-4bec-982b-fef733ecf451)
 
 

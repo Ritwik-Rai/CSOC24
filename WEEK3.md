@@ -123,22 +123,15 @@ Flag substring characters :
   Remove overlapping characters to get flag: picoCTF{not_this_again_337115}  
 
 ### 10)  WHO are you  
+When we open the link we are asked to open it with officials PicoBrowser.  
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/a22f648d-60be-43c7-a964-533a1b36b799)
 
+We intercept request with burp suite and change agent to PicoBrowser.  
+Now it says it doesnt trust users from other site . So we use refered tag and put site adress in it.  
+Now it says it takes users only in 2018. We use date header and put reandom date in 2018 in it. 
 
-        
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/06d96dd9-8a3d-4891-8c70-56dbddc8b1d8)  
 
-
-
-
-
-
-
-
-
-
-
-
-![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/06d96dd9-8a3d-4891-8c70-56dbddc8b1d8)
 
 
 
@@ -178,5 +171,6 @@ Flag substring characters :
 
 
 ![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/35b5e6c3-e886-4bec-982b-fef733ecf451)
+![image](https://github.com/Ritwik-Rai/CSOC24/assets/143336354/06d96dd9-8a3d-4891-8c70-56dbddc8b1d8)
 
 
